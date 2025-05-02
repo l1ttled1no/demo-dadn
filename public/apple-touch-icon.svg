@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="#2563eb"/>
+  
+  <!-- Smart home icon (centered) -->
+  <g transform="translate(30,30) scale(0.6)">
+    <path d="M256 64L448 192V448H64V192L256 64Z" fill="white"/>
+    <rect x="192" y="288" width="128" height="160" fill="#2563eb"/>
+    <rect x="128" y="224" width="64" height="64" fill="#2563eb"/>
+    <rect x="320" y="224" width="64" height="64" fill="#2563eb"/>
+    <path d="M256 64L448 192L256 128L64 192L256 64Z" fill="#60a5fa"/>
+  </g>
+</svg> 
