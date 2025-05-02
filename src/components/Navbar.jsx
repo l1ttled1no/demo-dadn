@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineHome, AiOutlineTeam, AiOutlineContacts, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FaCog } from 'react-icons/fa';
-import logo from '../assets/logo.svg';
+import logo from '../assets/LogoBK.png';
 import './Navbar.css';
 
 const Navbar = ({ isMinimized, onToggle }) => {

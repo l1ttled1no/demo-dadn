@@ -2,7 +2,7 @@ import React from 'react';
 import { AiFillSafetyCertificate, AiOutlineHome, AiFillCamera } from 'react-icons/ai';
 import { BsShieldLockFill } from 'react-icons/bs';
 import { MdOutlineMonitorHeart } from 'react-icons/md';
-import logo from '../assets/logo.png';
+import logo from '../assets/LogoBK.png';
 import './About.css';
 
 const About = () => {

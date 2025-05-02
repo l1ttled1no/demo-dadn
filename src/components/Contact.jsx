@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineMail, AiOutlinePhone, AiOutlineEnvironment, AiOutlineGithub } from 'react-icons/ai';
-import logo from '../assets/logo.png';
+import logo from '../assets/LogoBK.png';
 import './Contact.css';
 
 const Contact = () => {
