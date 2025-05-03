@@ -27,6 +27,7 @@ const Dashboard = ({ isMinimized }) => {
   const [refreshInterval, setRefreshInterval] = useState(30);
   const [isConnected, setIsConnected] = useState(false);
   const [lastUpdate, setLastUpdate] = useState(null);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   const updateHistoricalData = (feed, newValue) => {
     const timestamp = new Date().toISOString();
@@ -422,6 +423,30 @@ const Dashboard = ({ isMinimized }) => {
     return () => clearInterval(interval);
   }, [refreshInterval, fetchData]);
 
+  // Add real-time clock update
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Format the date and time
+  const formatDateTime = (date) => {
+    const options = {
+      weekday: 'long',
+      month: '2-digit',
+      day: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+    return date.toLocaleString('en-US', options);
+  };
+
   return (
     <div className={`dashboard-container ${isMinimized ? 'minimized' : ''}`}>
       <div className="dashboard-header">
@@ -439,6 +464,10 @@ const Dashboard = ({ isMinimized }) => {
             Refresh Now
           </button>
         </div>
+      </div>
+
+      <div className="current-time">
+        {formatDateTime(currentTime)}
       </div>
 
       <div className="dashboard-content">

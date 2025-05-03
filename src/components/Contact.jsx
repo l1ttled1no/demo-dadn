@@ -33,8 +33,8 @@ const Contact = () => {
     {
       icon: <AiOutlineGithub />,
       title: "GitHub",
-      info: "YoloBit Project",
-      link: "https://github.com/yourusername/yolobit-project"
+      info: "Developer GitHub Profile",
+      link: "https://github.com/l1ttled1no"
     }
   ];
 

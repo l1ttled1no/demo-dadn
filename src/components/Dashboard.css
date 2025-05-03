@@ -15,8 +15,8 @@
 
 .dashboard-header {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 40px;
+  margin-bottom: 1.5rem;
+  padding: 25px;
   background: linear-gradient(135deg, #1488D8, #030391);
   border-radius: 20px;
   color: white;
@@ -85,8 +85,9 @@
 .dashboard-content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
   padding: 0 1rem;
+  margin-top: 0.5rem;
 }
 
 .sensors-section,
@@ -99,9 +100,9 @@
 
 .sensors-section h2,
 .controls-section h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #2c3e50;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 600;
   background: linear-gradient(135deg, #1488D8, #030391);
   -webkit-background-clip: text;
@@ -111,8 +112,8 @@
 
 .stats-grid {
   display: grid;
-  gap: 1.5rem;
-  padding: 0.5rem;
+  gap: 1rem;
+  padding: 0.25rem;
   width: 100%;
 }
 
@@ -482,4 +483,15 @@
 
 .stat-card[data-device="door-button"] .stat-value {
   margin-bottom: 0;
+}
+
+.current-time {
+  text-align: right;
+  color: #2c3e50;
+  font-size: 0.9rem;
+  padding: 0.25rem 2rem;
+  margin: 0.5rem 0;
+  background: transparent;
+  font-weight: 500;
+  opacity: 0.8;
 } 
