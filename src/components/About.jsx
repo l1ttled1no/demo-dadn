@@ -8,29 +8,29 @@ import './About.css';
 const About = () => {
   const teamMembers = [
     {
-      name: "Member 1",
+      name: "Phạm Lê Hữu Hiệp",
       role: "Team Leader",
-      description: "Project Management & System Architecture"
-    },
-    {
-      name: "Member 2",
-      role: "Developer",
-      description: "IoT Integration & Hardware Development"
-    },
-    {
-      name: "Member 3",
-      role: "Developer",
-      description: "Frontend Development & UI/UX Design"
-    },
-    {
-      name: "Member 4",
-      role: "Developer",
-      description: "Backend Development & Security Systems"
-    },
-    {
-      name: "Member 5",
-      role: "Developer",
       description: "AI/ML Integration & Face Recognition Systems"
+    },
+    {
+      name: "Nguyễn Tiến Hưng",
+      role: "Developer",
+      description: "IoT Integration & Face Recognition Systems"
+    },
+    {
+      name: "Nguyễn Đăng Duy",
+      role: "Developer",
+      description: "UI/UX Design & Backend Development"
+    },
+    {
+      name: "Hà Kiến Hoa",
+      role: "Developer",
+      description: "Frontend & Web Development"
+    },
+    {
+      name: "Nguyễn Bá Vương",
+      role: "Developer",
+      description: "Frontend & Web Development"
     }
   ];
 
