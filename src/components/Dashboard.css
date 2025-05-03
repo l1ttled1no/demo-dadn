@@ -36,14 +36,50 @@
   margin-bottom: 0.5rem;
 }
 
-.refresh-info {
-  color: rgba(255, 255, 255, 0.8) !important;
-  font-size: 0.9rem !important;
-  margin-top: 1rem !important;
-  background: rgba(255, 255, 255, 0.1);
+.refresh-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.auto-refresh {
+  background: rgba(0, 0, 0, 0.1);
   padding: 8px 16px;
   border-radius: 20px;
-  display: inline-block;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.refresh-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.refresh-button svg {
+  transition: transform 0.3s ease;
+}
+
+.refresh-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.refresh-button:hover svg {
+  transform: rotate(180deg);
+}
+
+.refresh-button:active {
+  transform: scale(0.98);
 }
 
 .dashboard-content {

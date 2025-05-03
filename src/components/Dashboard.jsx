@@ -130,14 +130,37 @@ const Dashboard = ({ isMinimized }) => {
         throw new Error('Failed to update fan speed');
       }
 
+      // Verify the update by fetching the current state
+      const verifyResponse = await fetch(
+        `${ADAFRUIT_CONFIG.aioUrl}/${ADAFRUIT_CONFIG.username}/feeds/fan/data/last`,
+        {
+          headers: {
+            'X-AIO-Key': ADAFRUIT_CONFIG.key,
+          },
+        }
+      );
+
+      if (!verifyResponse.ok) {
+        throw new Error('Failed to verify fan speed update');
+      }
+
+      const data = await verifyResponse.json();
+      const serverSpeed = parseInt(data.value);
+
+      // Update local state with the verified server state
       setDeviceStates(prev => ({
         ...prev,
-        fan: parseInt(speed)
+        fan: serverSpeed
       }));
       setLastUpdate(new Date());
+
+      // If the server state doesn't match what we tried to set, throw an error
+      if (serverSpeed !== parseInt(speed)) {
+        throw new Error('Server state does not match requested state');
+      }
     } catch (error) {
       console.error('Error updating fan speed:', error);
-      // Fetch current state from server on error
+      // On any error, fetch the current state from the server
       fetchData();
     }
   };
@@ -404,7 +427,18 @@ const Dashboard = ({ isMinimized }) => {
       <div className="dashboard-header">
         <h1>Smart Home Dashboard</h1>
         <p>Real-time monitoring and control of your home devices</p>
-        <p className="refresh-info">Data refreshes every {refreshInterval} minutes</p>
+        <div className="refresh-controls">
+          <div className="auto-refresh">Auto-refresh every {refreshInterval} minutes</div>
+          <button 
+            className="refresh-button" 
+            onClick={fetchData}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+            </svg>
+            Refresh Now
+          </button>
+        </div>
       </div>
 
       <div className="dashboard-content">
