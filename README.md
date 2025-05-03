@@ -87,7 +87,6 @@ src/
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
-
+Nguyen Dang Duy
 - Email: duynguyendang04@gmail.com
-- Website: [HCMUT](https://hcmut.edu.vn/)
-- GitHub: [YoloBit Project](https://github.com/yourusername/yolobit-project)
+- GitHub: [@l1ttled1no](https://github.com/l1ttled1no)
