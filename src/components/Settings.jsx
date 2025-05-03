@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaCog, FaCloud, FaBell, FaChartLine, FaLock, FaArrowLeft } from 'react-icons/fa';
+import { FaCog, FaBell, FaChartLine, FaArrowLeft } from 'react-icons/fa';
 import './Settings.css';
 
 const Settings = ({ isMinimized }) => {
@@ -168,37 +168,6 @@ const Settings = ({ isMinimized }) => {
                   </div>
                 </label>
               </div>
-            </div>
-          </div>
-
-          <div className="settings-section">
-            <h2><FaCloud /> Adafruit IO Configuration</h2>
-            <div className="setting-item">
-              <label>Username</label>
-              <div className="secure-input">
-                <input
-                  type="text"
-                  value={import.meta.env.VITE_ADAFRUIT_USERNAME || "Configure in .env"}
-                  disabled
-                  className="disabled-input"
-                />
-                <FaLock className="lock-icon" />
-              </div>
-            </div>
-            <div className="setting-item">
-              <label>API Key</label>
-              <div className="secure-input">
-                <input
-                  type="password"
-                  value={import.meta.env.VITE_ADAFRUIT_KEY || "Configure in .env"}
-                  disabled
-                  className="disabled-input"
-                />
-                <FaLock className="lock-icon" />
-              </div>
-              <p className="setting-description warning">
-                For security reasons, API credentials cannot be modified here
-              </p>
             </div>
           </div>
         </div>
